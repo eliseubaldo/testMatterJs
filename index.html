@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+
+    <script src="node_modules/matter-js/build/matter.min.js" type="text/javascript"></script>
+
+    <style type="text/css" media="screen">
+    .water{
+    	position: absolute;
+    top: 484px;
+    left: 20px;    
+    width: 860px;
+    height: 900px;
+    opacity: 0.8;
+    }
+
+    .waves {
+		background-image: url(assets/waves.png);
+	    background-position: 99% 0%;
+	    position: absolute;
+	    left: 0px;
+	    bottom: 0px;
+	    width: 860px;
+	    height: 102px;
+		transition: all 2s ease-out;		
+		opacity: 0.80;		
+		}
+
+    #canvas{
+    	overflow:hidden;
+    	width:900px;
+    	height:500px;
+    	position: relative;
+
+    }
+
+    .waveContainer{
+    	position:absolute;
+    	bottom: 20px;
+    	width: 860px;
+    	left: 20px;
+    	height: 500px;
+    	overflow: hidden;   	    	
+    } 	
+    
+    .controls{
+    	position: absolute;
+    	top:0;
+    	right:0;    	
+    	min-height:100px;    	
+    }
+    .controls a{
+    	display:inline-block;
+    	border:1px solid red;
+    	width:100px;
+    	height:30px;
+    	color:black;
+    	padding:10px;
+    	text-align: center;
+    }
+    </style>
+    
+    
+</head>
+
+<body>
+
+<div id="canvas">
+	<canvas id="myCanvas"></canvas>	
+	<div class="waveContainer">
+		<div class="waves" id="water"></div>
+	</div>
+	
+</div>
+
+<div class="controls">
+	<a href="#" title="" onClick="Mod.addItem()">add Item</a>
+</div>
+
+
+<script src="app/app2.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
